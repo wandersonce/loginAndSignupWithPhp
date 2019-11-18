@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat", sans-serif;
+}
+
+/*INDEX PAGE CSS CODE */
+.landing-page{
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.landing-page::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("bg.jpg") no-repeat;
+    background-size: cover;
+    opacity: .3;
+    animation: anim 25s linear infinite;
+}
+
+@keyframes anim{
+    50%{
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.page-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.page-content h1{
+    color: white;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.page-content p{
+    color: white;
+    margin-bottom: 20px;
+}
+
+.page-content a{
+    display: inline-block;
+    text-decoration: none;
+    color: greenyellow;
+    border: 2px solid greenyellow;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    transition: 0.4s linear;
+    width: 100px;
+}
+
+.page-content a:hover{
+    color: blue;
+    background: white;
+}
+
+/*   END INDEX CSS   */
+
+/* LOGIN/SIGN UP PAGE CSS */
+
+.box{
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #191919;
+    text-align: center;
+    opacity: .8;
+    border-radius: 20px;
+}
+
+.box h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.box input[type = "text"],.box input[type = "password"],.box input[type = "tel"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box input[type = "text"]:focus ,.box input[type = "password"]:focus,.box input[type = "tel"]:focus{
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+.box input[type = "submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    width: 120px;
+}
+
+.box input[type = "submit"]:hover{
+    background: #2ecc71;
+}
+
+.errorregister{
+    color: white;
+    font-size: 0.8em;
+}
+/* END LOGIN CSS*/ 
+
